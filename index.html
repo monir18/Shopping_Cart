@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="asset/css/styles.css">
+</head>
+<body>
+    
+    <header>
+        <h1>Shopping Cart</h1>
+        <div id="cart-icon-container">
+            <a onclick="viewCart()">
+                <img id="cart-icon" src="asset/img/cart.png" alt="Cart Icon"><span id="cart-count">0</span>
+            </a>
+            
+            
+            
+        </div>
+    </header>
+
+    <main>
+        <section id="product-list">
+            <h2>Products</h2>
+            <div id="products-container" class="grid"></div>
+        </section>
+
+        <section id="cart-view" class="hidden">
+            <h2>Cart</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Price</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="cart-items"></tbody>
+            </table>
+            <div id="cart-total">
+                <p>Total: $<span id="total-price">0.00</span></p>
+                <button onclick="clearCart()">Clear Cart</button>
+                <button onclick="checkout()">Checkout</button>
+            </div>
+        </section>
+    </main>
+
+    <script src="asset/js/products.js"></script>
+    <script src="asset/js/cart.js"></script>
+    <script src="asset/js/ui.js"></script>
+</body>
+</html>
